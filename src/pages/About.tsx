@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('overview');
-  
+
   const aboutTabs = [
     { id: 'overview', name: '企业简介' },
     { id: 'history', name: '发展历程' },
@@ -11,7 +11,7 @@ const About = () => {
     { id: 'culture', name: '企业文化' },
     { id: 'partners', name: '合作伙伴' }
   ];
-  
+
   return (
     <div className="py-12 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ const About = () => {
             陕西泓奥科技有限责任公司成立于2024年，是一家以"新锐科技企业，专注政企智能化"为核心定位的解决方案提供商。
           </p>
         </div>
-        
+
         {/* 关于我们标签页 */}
         <div className="mb-10">
           <div className="border-b border-gray-200">
@@ -32,18 +32,17 @@ const About = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`mr-1 py-4 px-1 border-b-2 font-medium text-sm focus:outline-none transition-all duration-300 ${
-                    activeTab === tab.id
+                  className={`mr-1 py-4 px-1 border-b-2 font-medium text-sm focus:outline-none transition-all duration-300 ${activeTab === tab.id
                       ? 'border-blue-500 text-blue-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  }`}
+                    }`}
                 >
                   <span className="px-3">{tab.name}</span>
                 </button>
               ))}
             </nav>
           </div>
-          
+
           {/* 标签页内容 */}
           <div className="py-8">
             {activeTab === 'overview' && (
@@ -69,9 +68,9 @@ const About = () => {
                   </div>
                 </div>
                 <div className="bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="/images/about/office-environment.png" 
-                    alt="企业环境" 
+                  <img
+                    src="/images/about/office-environment.png"
+                    alt="企业环境"
                     className="w-full h-64 object-cover"
                   />
                   <div className="p-6">
@@ -100,56 +99,56 @@ const About = () => {
                   </div>
                 </div>
               </div>)}
-              
+
             {activeTab === 'history' && (<div className="relative">
-                {/* 时间线 */}
-                <div className="hidden md:block absolute left-0 top-0 bottom-0 w-0.5 bg-blue-200 transform -translate-x-1/2 ml-6"></div>
-                
-                <div className="space-y-10">
-                  <div className="relative flex">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold z-10">
-                      2024
-                    </div>
-                    <div className="ml-6 md:ml-10 flex-1">
-                      <h3 className="text-xl font-semibold mb-2">奠基之年——战略启航与团队组建</h3>
-                      <p className="text-gray-700">
-                        公司正式成立，确立"聚焦政企信息化与AI智能化"的核心发展方向，同步组建由行业资深专家与技术骨干构成的专业团队，为技术研发与市场拓展奠定坚实基础。
-                      </p>
-                    </div>
+              {/* 时间线 */}
+              <div className="hidden md:block absolute left-0 top-0 bottom-0 w-0.5 bg-blue-200 transform -translate-x-1/2 ml-6"></div>
+
+              <div className="space-y-10">
+                <div className="relative flex">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold z-10">
+                    2024
                   </div>
-                  
-                  <div className="relative flex">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold z-10">
-                      2025
-                    </div>
-                    <div className="ml-6 md:ml-10 flex-1">
-                      <h3 className="text-xl font-semibold mb-2">技术突破——核心产品获权威认证</h3>
-                      <p className="text-gray-700">
-                        公司自主研发的核心产品"行业智链驾驶平台"成功获得国家软件著作权（登记号：2025SR1189990），标志着其在AI智能化技术应用领域的研发实力获得权威认可，为业务落地提供关键技术支撑。
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="relative flex">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold z-10">
-                      2026
-                    </div>
-                    <div className="ml-6 md:ml-10 flex-1">
-                      <h3 className="text-xl font-semibold mb-2">全国化战略布局</h3>
-                      <p className="text-gray-700">
-                        为持续扩大市场影响力，公司计划于2026年启动全国化拓展，重点布局3个核心区域市场，通过技术输出与本地化服务结合的模式，将"行业智链驾驶平台"的应用价值辐射至更多政企客户，推动行业数字化转型进程。
-                      </p>
-                    </div>
+                  <div className="ml-6 md:ml-10 flex-1">
+                    <h3 className="text-xl font-semibold mb-2">奠基之年——战略启航与团队组建</h3>
+                    <p className="text-gray-700">
+                      公司正式成立，确立"聚焦政企信息化与AI智能化"的核心发展方向，同步组建由行业资深专家与技术骨干构成的专业团队，为技术研发与市场拓展奠定坚实基础。
+                    </p>
                   </div>
                 </div>
-              </div>)}
-              
+
+                <div className="relative flex">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold z-10">
+                    2025
+                  </div>
+                  <div className="ml-6 md:ml-10 flex-1">
+                    <h3 className="text-xl font-semibold mb-2">技术突破——核心产品获权威认证</h3>
+                    <p className="text-gray-700">
+                      公司自主研发的核心产品"行业智链驾驶平台"成功获得国家软件著作权（登记号：2025SR1189990），标志着其在AI智能化技术应用领域的研发实力获得权威认可，为业务落地提供关键技术支撑。
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative flex">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold z-10">
+                    2026
+                  </div>
+                  <div className="ml-6 md:ml-10 flex-1">
+                    <h3 className="text-xl font-semibold mb-2">全国化战略布局</h3>
+                    <p className="text-gray-700">
+                      为持续扩大市场影响力，公司计划于2026年启动全国化拓展，重点布局3个核心区域市场，通过技术输出与本地化服务结合的模式，将"行业智链驾驶平台"的应用价值辐射至更多政企客户，推动行业数字化转型进程。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>)}
+
             {activeTab === 'team' && (
               <div>
                 <h3 className="text-xl font-semibold mb-6">人才-研发-实施 三维能力体系</h3>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-  <div className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                       <i className="fa-solid fa-user-graduate text-blue-600 text-2xl"></i>
                     </div>
@@ -158,8 +157,8 @@ const About = () => {
                       核心成员由国内顶尖技术研发人才构成，具备深厚的技术积累与丰富的行业实践经验，技术领域分布覆盖数据库、人工智能、网络安全等核心方向。
                     </p>
                   </div>
-                  
-  <div className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+
+                  <div className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                       <i className="fa-solid fa-flask text-blue-600 text-2xl"></i>
                     </div>
@@ -168,8 +167,8 @@ const About = () => {
                       研发投入采用"内研+外合"的协同模式，内部持续加大核心技术攻关力度，外部与众多科研机构、企业及政府建立紧密合作关系。
                     </p>
                   </div>
-                  
-  <div className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+
+                  <div className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                       <i className="fa-solid fa-cogs text-blue-600 text-2xl"></i>
                     </div>
@@ -180,7 +179,7 @@ const About = () => {
                   </div>
                 </div>
               </div>)}
-              
+
             {activeTab === 'honors' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
@@ -206,16 +205,16 @@ const About = () => {
                         </div>
                       </div>
                       <div className="flex-shrink-0 w-32">
-                        <img 
-                          src="/images/about/ruanzhu.png" 
-                          alt="软件著作权证书" 
+                        <img
+                          src="/images/about/ruanzhu.png"
+                          alt="软件著作权证书"
                           className="w-full h-40 object-contain bg-gray-50 rounded-lg"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-semibold mb-6">安全认证资质</h3>
                   <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100">
@@ -223,7 +222,7 @@ const About = () => {
                       <span className="text-gray-700 font-medium">安全资质认证总数</span>
                       <span className="text-3xl font-bold text-blue-600">20+</span>
                     </div>
-                    
+
                     <div className="space-y-4">
                       <div className="flex items-center">
                         <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
@@ -259,13 +258,13 @@ const About = () => {
                   </div>
                 </div>
               </div>)}
-              
+
             {activeTab === 'culture' && (
               <div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
                   <div>
                     <h3 className="text-xl font-semibold mb-6">核心价值观</h3>
-                    
+
                     <div className="space-y-6">
                       <div className="flex">
                         <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
@@ -278,7 +277,7 @@ const About = () => {
                           </p>
                         </div>
                       </div>
-                      
+
                       <div className="flex">
                         <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                           <span className="text-blue-600 font-bold">2</span>
@@ -290,7 +289,7 @@ const About = () => {
                           </p>
                         </div>
                       </div>
-                      
+
                       <div className="flex">
                         <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                           <span className="text-blue-600 font-bold">3</span>
@@ -302,7 +301,7 @@ const About = () => {
                           </p>
                         </div>
                       </div>
-                      
+
                       <div className="flex">
                         <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                           <span className="text-blue-600 font-bold">4</span>
@@ -316,10 +315,10 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-xl font-semibold mb-6">经营理念</h3>
-                    
+
                     <div className="bg-blue-50 rounded-lg p-6 border border-blue-100 mb-6">
                       <h4 className="text-lg font-medium mb-3">客户至上，品质第一</h4>
                       <p className="text-gray-700 mb-4">
@@ -331,7 +330,7 @@ const About = () => {
                         </p>
                       </div>
                     </div>
-                    
+
                     <div className="bg-gray-900 text-white rounded-lg p-6 text-center">
                       <h4 className="text-xl font-bold mb-2">文化标语</h4>
                       <p className="text-lg">以技术创新服务政企，以诚信合作共赢未来</p>
@@ -339,20 +338,20 @@ const About = () => {
                   </div>
                 </div>
               </div>)}
-              
+
             {activeTab === 'partners' && (
               <div>
                 <h3 className="text-xl font-semibold mb-6">战略生态-技术赋能-场景落地 三位一体合作伙伴体系</h3>
-                
+
                 <div className="space-y-10">
                   <div>
                     <h4 className="text-lg font-medium mb-4 text-gray-700">战略生态合作伙伴</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
+                      <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
                         <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
-                          <img 
-                            src="/images/partners/china-mobile-logo.png" 
-                            alt="中国移动" 
+                          <img
+                            src="/images/partners/china-mobile-logo.png"
+                            alt="中国移动"
                             className="w-16 h-16 object-contain"
                           />
                         </div>
@@ -365,15 +364,15 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-lg font-medium mb-4 text-gray-700">技术赋能合作伙伴</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
+                    <div className="grid grid-cols-3 md:grid-cols-2 gap-6">
+                      <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
                         <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
-                          <img 
-                            src="/images/partners/megvii-logo.png" 
-                            alt="旷视科技" 
+                          <img
+                            src="/images/partners/megvii-logo.png"
+                            alt="旷视科技"
                             className="w-16 h-16 object-contain"
                           />
                         </div>
@@ -384,43 +383,37 @@ const About = () => {
                           </p>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-medium mb-4 text-gray-700">场景落地合作伙伴</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
-                        <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
-                          <img 
-                            src="/images/partners/hikvision-logo.png" 
-                            alt="海康威视" 
-                            className="w-16 h-16 object-contain"
-                          />
+                    <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
+                          <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
+                            <img
+                              src="/images/partners/hikvision-logo.png"
+                              alt="海康威视"
+                              className="w-16 h-16 object-contain"
+                            />
+                          </div>
+                          <div>
+                            <h5 className="text-lg font-medium mb-1">海康威视</h5>
+                            <p className="text-gray-700 text-sm">
+                              联合海康威视开发智能安防解决方案，推动安防技术在多行业的应用拓展，实现从技术研发到行业落地的闭环。
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <h5 className="text-lg font-medium mb-1">海康威视</h5>
-                          <p className="text-gray-700 text-sm">
-                            联合海康威视开发智能安防解决方案，推动安防技术在多行业的应用拓展，实现从技术研发到行业落地的闭环。
-                          </p>
+
+                        <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
+                          <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
+                            <img
+                              src="/images/partners/dahua-logo.png"
+                              alt="浙江大华"
+                              className="w-16 h-16 object-contain"
+                            />
+                          </div>
+                          <div>
+                            <h5 className="text-lg font-medium mb-1">浙江大华</h5>
+                            <p className="text-gray-700 text-sm">
+                              携手浙江大华深化视频监控与智能分析技术的应用，为行业客户提供高效的视频数据处理方案。
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      
-  <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
-                        <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
-                          <img 
-                            src="/images/partners/dahua-logo.png" 
-                            alt="浙江大华" 
-                            className="w-16 h-16 object-contain"
-                          />
-                        </div>
-                        <div>
-                          <h5 className="text-lg font-medium mb-1">浙江大华</h5>
-                          <p className="text-gray-700 text-sm">
-                            携手浙江大华深化视频监控与智能分析技术的应用，为行业客户提供高效的视频数据处理方案。
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

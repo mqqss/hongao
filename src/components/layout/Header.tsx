@@ -15,7 +15,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img 
-                src="/public/images/logo/hongao-logo.png" 
+                src="/images/logo/hongao-logo.png" 
                 alt="泓奥科技logo" 
                 className="h-8 mr-2 object-contain"
               />
