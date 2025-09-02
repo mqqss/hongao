@@ -2,17 +2,27 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Products = () => {
-  const [activeCategory, setActiveCategory] = useState('aiInfrastructure');
+  // 定义产品分类类型
+  type ProductCategory = 'aiInfrastructure' | 'database' | 'security' | 'storage';
+  
+  const [activeCategory, setActiveCategory] = useState<ProductCategory>('aiInfrastructure');
   
   // 产品数据
   const productCategories = [
-    { id: 'aiInfrastructure', name: 'AI基础设施系列' },
-    { id: 'database', name: '数据库一体机系列' },
-    { id: 'security', name: '数据安全与运维系列' },
-    { id: 'storage', name: '存储与基础设施系列' }
+    { id: 'aiInfrastructure' as const, name: 'AI基础设施系列' },
+    { id: 'database' as const, name: '数据库一体机系列' },
+    { id: 'security' as const, name: '数据安全与运维系列' },
+    { id: 'storage' as const, name: '存储与基础设施系列' }
   ];
   
-  const products = {
+  const products: Record<ProductCategory, Array<{
+    id: number;
+    name: string;
+    subtitle: string;
+    description: string;
+    features: string[];
+    image: string;
+  }>> = {
     aiInfrastructure: [
       {
         id: 0,
@@ -24,7 +34,7 @@ const Products = () => {
           '动态工具发现与调用，提升数据交互效率',
           '内置安全机制，保障数据隐私与灵活部署能力'
         ],
-        image: 'https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=AI%20infrastructure%20platform%20dashboard&sign=b31ec8e1007d1a4d5d3eda8bf0aa6d4c'
+        image: '/images/products/ai-platform-dashboard.png'
       }
     ],
     database: [
@@ -38,7 +48,7 @@ const Products = () => {
           '自动化运维体系，覆盖部署、监控、升级全生命周期',
           '国产化软硬协同优化，满足关键信息基础设施安全要求'
         ],
-        image: 'https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=HDM%20database%20server%20system&sign=f7828ae35fc6d48139c10f31932ff5f0'
+        image: '/images/products/hdm-database.png'
       },
       {
         id: 2,
@@ -50,7 +60,7 @@ const Products = () => {
           '支持主流商业及国产数据库，兼容性强',
           '高性能、高可靠特性，承载大规模混合负载'
         ],
-        image: 'https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=HDA%20database%20server%20system&sign=e13f8f6435b1084b6cf988a37045c866'
+        image: '/images/products/hda-database.png'
       },
       {
         id: 3,
@@ -62,7 +72,7 @@ const Products = () => {
           '基于数据库大模型的语义理解能力',
           '问题拆解+查询过程可视化的二次验证机制'
         ],
-        image: 'https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=AI%20database%20analysis%20system&sign=e406d2e95bf5df9bf23a2a370c458e72'
+        image: '/images/products/hdam-ai-database.png'
       }
     ],
     security: [
@@ -76,7 +86,7 @@ const Products = () => {
           '分钟级RTO（业务恢复≤10分钟）',
           '一份数据、多场景应用能力，支持备份恢复、开发测试、数据分析'
         ],
-        image: 'https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Database%20backup%20and%20disaster%20recovery%20system&sign=d0f605c24a4ac0cacfe0b552b3015e7a'
+        image: '/images/products/hdbm-backup.png'
       },
       {
         id: 5,
@@ -89,7 +99,7 @@ const Products = () => {
           '实时阻断SQL注入、越权访问等危险操作',
           '全量行为审计，生成可追溯的审计报告'
         ],
-        image: 'https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Database%20security%20monitoring%20system&sign=54cfeee8fce812eed2afd20551a9efce'
+        image: '/images/products/hdbam-monitor.png'
       }
     ],
     storage: [
@@ -104,7 +114,7 @@ const Products = () => {
           '微秒级数据访问延迟与超高IOPS',
           '支持数据库加速、AI训练支撑、大数据处理等场景'
         ],
-        image: 'https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=High%20performance%20distributed%20storage%20system&sign=be186dba40c6b07bd5283aa2a4f6b796'
+        image: '/images/products/hdsm-storage.png'
       }
     ]
   };
@@ -126,7 +136,7 @@ const Products = () => {
           {productCategories.map(category => (
             <button
               key={category.id}
-              onClick={() => setActiveCategory(category.id)}
+              onClick={() => setActiveCategory(category.id as ProductCategory)}
               className={`px-6 py-3 rounded-full mx-2 transition-all duration-300 whitespace-nowrap ${
                 activeCategory === category.id
                   ? 'bg-blue-600 text-white shadow-md'
@@ -175,9 +185,14 @@ const Products = () => {
                     </ul>
                   </div>
                   
-                  <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                  <a 
+                    href="https://alidocs.dingtalk.com/notable/share/form/v018K4nyeZMJ7oJznLb_dv19yqvsgs3oebp3pcjys_1qX0QQ0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                  >
                     咨询详情 <i className="fa-solid fa-arrow-right ml-2"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>

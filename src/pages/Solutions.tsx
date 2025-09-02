@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const Solutions = () => {
-    const [activeSolution, setActiveSolution] = useState("government");
+type SolutionType = 'government' | 'finance' | 'healthcare';
 
-    const solutionCategories = [{
+const Solutions = () => {
+    const [activeSolution, setActiveSolution] = useState<SolutionType>("government");
+
+    const solutionCategories: { id: SolutionType; name: string }[] = [{
         id: "government",
         name: "政务领域"
     }, {
@@ -20,7 +22,7 @@ const Solutions = () => {
             title: "政务领域解决方案",
             subtitle: "数据驱动决策，提升治理效能",
             description: "陕西泓奥科技有限公司政务领域解决方案以\"数据驱动决策\"为核心价值，构建\"数据资源整合-智能检索-政策辅助\"全流程服务体系，旨在通过智能化技术提升政务处理效率与决策科学性。",
-            image: "https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Government%20digitalization%20management%20system&sign=928f1fb02c67855a10ec84cc50626cf5",
+            image: "/images/solutions/government-digitalization.png",
             applicationScenarios: ["政府信息化系统建设", "政务数据管理与分析", "跨部门数据共享平台", "政策研究与制定辅助", "民生服务优化"],
 
             implementationProcess: [{
@@ -44,7 +46,7 @@ const Solutions = () => {
             title: "金融领域解决方案",
             subtitle: "金融数据安全与合规保障体系",
             description: "陕西泓奥科技有限公司金融领域解决方案定位为\"金融数据安全与合规保障体系\"，重点覆盖银行、证券及支付机构等核心金融场景，旨在通过专业化技术手段解决金融行业数据安全与合规管理的核心痛点。",
-            image: "https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Financial%20data%20security%20system&sign=195770094a7effab4f7750657b0e0fa7",
+            image: "/images/solutions/finance-data-security.png",
             applicationScenarios: ["核心交易系统数据保护", "反洗钱监测", "虚拟货币交易监管", "金融合规审计", "风险预警与控制"],
 
             implementationProcess: [{
@@ -68,7 +70,7 @@ const Solutions = () => {
             title: "医疗健康解决方案",
             subtitle: "体检服务智能化升级",
             description: "陕西泓奥科技有限公司医疗健康解决方案以\"体检服务智能化升级\"为核心场景切入点，通过\"数据采集层-处理层-应用层\"三层架构设计，实现体检服务全流程的智能化转型。",
-            image: "https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Medical%20health%20data%20analysis%20system&sign=4cf32783a8a54f10de9ca0758f14b55e",
+            image: "/images/solutions/medical-health-analysis.png",
             applicationScenarios: ["公立医院体检中心", "专业健康管理机构", "企业员工健康管理", "社区健康服务中心", "远程健康监测"],
 
             implementationProcess: [{
@@ -169,7 +171,7 @@ const Solutions = () => {
                                 {}
                                 {solutions[activeSolution].implementationProcess.length > 1 && <></>}
                                 <div className="space-y-8">
-                                    {solutions[activeSolution].implementationProcess.map((step, idx) => <div key={step.step} className="flex">
+                                    {solutions[activeSolution].implementationProcess.map((step) => <div key={step.step} className="flex">
                                         <div className="flex-shrink-0 mr-4">
                                             <div
                                                 className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold z-10">

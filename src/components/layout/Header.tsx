@@ -13,14 +13,14 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-  <Link to="/" className="flex-shrink-0 flex items-center">
-  <img 
-  src="https://lf-code-agent.coze.cn/obj/x-ai-cn/295344730114/attachment/09029bae6a167aa80889bcb156510159_20250825115027.png" 
-  alt="泓奥科技logo" 
-  className="h-8 mr-2 object-contain"
-/>
-    <span className="text-blue-600 font-bold text-xl">泓奥科技</span>
-  </Link>
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <img 
+                src="/public/images/logo/hongao-logo.png" 
+                alt="泓奥科技logo" 
+                className="h-8 mr-2 object-contain"
+              />
+              <span className="text-blue-600 font-bold text-xl">泓奥科技</span>
+            </Link>
             <nav className="hidden md:ml-10 md:flex md:space-x-8">
                <NavLink 
                 to="/" 

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -71,7 +70,7 @@ const About = () => {
                 </div>
                 <div className="bg-gray-50 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Modern%20technology%20company%20office%20environment&sign=dbd272de530c41d64fb562ee04493ef7" 
+                    src="/images/about/office-environment.png" 
                     alt="企业环境" 
                     className="w-full h-64 object-cover"
                   />
@@ -187,21 +186,32 @@ const About = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-6">知识产权成果</h3>
                   <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100">
-                    <div className="flex items-start mb-4">
-                      <div className="flex-shrink-0 bg-blue-50 p-3 rounded-lg">
-                        <i className="fa-solid fa-certificate text-blue-600 text-2xl"></i>
+                    <div className="flex gap-6">
+                      <div className="flex-1">
+                        <div className="flex items-start mb-4">
+                          <div className="flex-shrink-0 bg-blue-50 p-3 rounded-lg mr-4">
+                            <i className="fa-solid fa-certificate text-blue-600 text-2xl"></i>
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-semibold mb-1">行业智链驾驶平台 V1.0</h4>
+                            <p className="text-gray-500 text-sm mb-2">国家软件著作权</p>
+                            <p className="text-gray-700 text-sm">登记号：2025SR1189990</p>
+                            <p className="text-gray-700 text-sm">登记时间：2025年7月8日</p>
+                          </div>
+                        </div>
+                        <div className="border-t border-gray-100 pt-4">
+                          <p className="text-gray-600 text-sm">
+                            该证书由中华人民共和国国家版权局正式颁发，标志着公司在智能驾驶领域的技术成果获得国家权威认可。
+                          </p>
+                        </div>
                       </div>
-                      <div className="ml-4">
-                        <h4 className="text-lg font-semibold mb-1">行业智链驾驶平台 V1.0</h4>
-                        <p className="text-gray-500 text-sm mb-2">国家软件著作权</p>
-                        <p className="text-gray-700 text-sm">登记号：2025SR1189990</p>
-                        <p className="text-gray-700 text-sm">登记时间：2025年7月8日</p>
+                      <div className="flex-shrink-0 w-32">
+                        <img 
+                          src="/images/about/ruanzhu.png" 
+                          alt="软件著作权证书" 
+                          className="w-full h-40 object-contain bg-gray-50 rounded-lg"
+                        />
                       </div>
-                    </div>
-                    <div className="border-t border-gray-100 pt-4 mt-4">
-                      <p className="text-gray-600 text-sm">
-                        该证书由中华人民共和国国家版权局正式颁发，标志着公司在智能驾驶领域的技术成果获得国家权威认可。
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -341,7 +351,7 @@ const About = () => {
   <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
                         <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
                           <img 
-                            src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=China%20Mobile%20company%20logo&sign=e327258f838ca398af0cedcb6ec5c418" 
+                            src="/images/partners/china-mobile-logo.png" 
                             alt="中国移动" 
                             className="w-16 h-16 object-contain"
                           />
@@ -362,7 +372,7 @@ const About = () => {
   <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
                         <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
                           <img 
-                            src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Megvii%20company%20logo&sign=58b4374fd1831bdb4caa9ed528d11d22" 
+                            src="/images/partners/megvii-logo.png" 
                             alt="旷视科技" 
                             className="w-16 h-16 object-contain"
                           />
@@ -383,7 +393,7 @@ const About = () => {
   <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
                         <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
                           <img 
-                            src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Hikvision%20company%20logo&sign=75e4a6ed2876146b0d6ad08a94232650" 
+                            src="/images/partners/hikvision-logo.png" 
                             alt="海康威视" 
                             className="w-16 h-16 object-contain"
                           />
@@ -399,7 +409,7 @@ const About = () => {
   <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
                         <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
                           <img 
-                            src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Dahua%20Technology%20company%20logo&sign=07733830e89bc468cf8a16519a39d020" 
+                            src="/images/partners/dahua-logo.png" 
                             alt="浙江大华" 
                             className="w-16 h-16 object-contain"
                           />

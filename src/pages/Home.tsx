@@ -9,7 +9,7 @@ const Home = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <img 
-            src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=Technology%20company%20background%20with%20data%20center%20and%20digital%20elements&sign=75f20ee7189a90f024b0fd076ffecc90" 
+            src="/images/hero/hero-bg-technology.png" 
             alt="科技背景" 
             className="w-full h-full object-cover"
           />
@@ -104,7 +104,7 @@ const Home = () => {
             <div className="group bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-blue-50">
                 <img 
-                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Database%20server%20room%20technology%20equipment&sign=af2c0f26137dccf61f2c86aa695298dd" 
+                  src="/images/products/database-server.png" 
                   alt="数据库一体机" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -123,7 +123,7 @@ const Home = () => {
             <div className="group bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-blue-50">
                 <img 
-                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=AI%20data%20analysis%20interface%20dashboard&sign=df54626d7f4c6db314189d7ceebe9678" 
+                  src="/images/products/ai-dashboard.png" 
                   alt="AI智能查询" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -142,7 +142,7 @@ const Home = () => {
             <div className="group bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-blue-50">
                 <img 
-                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=Data%20security%20monitoring%20center&sign=e44c85b78e59b0b336ae1b86399f7d11" 
+                  src="/images/products/security-monitoring.png" 
                   alt="数据安全运维" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -161,7 +161,7 @@ const Home = () => {
             <div className="group bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-blue-50">
                 <img 
-                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=High%20performance%20storage%20server%20technology&sign=213917f3e278b99fd51e20a7831ad9d0" 
+                  src="/images/products/storage-server.png" 
                   alt="高性能存储" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -252,7 +252,7 @@ const Home = () => {
             <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
               <div className="md:w-2/5">
                 <img 
-                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=portrait_4_3&prompt=Government%20digitalization%20management%20system&sign=38700cfc86f7c12ff385a8a6ec05e88d" 
+                  src="/images/solutions/government-digital.png" 
                   alt="政务领域解决方案" 
                   className="w-full h-full object-cover"
                 />
@@ -276,7 +276,7 @@ const Home = () => {
             <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
               <div className="md:w-2/5">
                 <img 
-                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=portrait_4_3&prompt=Financial%20data%20security%20system&sign=7d90a02d6b7b7e6679a0511adcd13444" 
+                  src="/images/solutions/finance-security.png" 
                   alt="金融领域解决方案" 
                   className="w-full h-full object-cover"
                 />
@@ -300,7 +300,7 @@ const Home = () => {
             <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row">
               <div className="md:w-2/5">
                 <img 
-                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=portrait_4_3&prompt=Medical%20health%20data%20analysis%20system&sign=ebbca1372f21cf27dd4833b9c917608d" 
+                  src="/images/solutions/healthcare-analysis.png" 
                   alt="医疗健康解决方案" 
                   className="w-full h-full object-cover"
                 />
@@ -336,35 +336,28 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-80">
             <div className="grayscale hover:grayscale-0 transition-all duration-300">
               <img 
-                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=China%20Mobile%20company%20logo&sign=e327258f838ca398af0cedcb6ec5c418" 
+                src="/images/partners/china-mobile-logo.png" 
                 alt="中国移动" 
                 className="h-16 object-contain"
               />
             </div>
             <div className="grayscale hover:grayscale-0 transition-all duration-300">
               <img 
-                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Hikvision%20company%20logo&sign=75e4a6ed2876146b0d6ad08a94232650" 
+                src="/images/partners/hikvision-logo.png" 
                 alt="海康威视" 
                 className="h-16 object-contain"
               />
             </div>
             <div className="grayscale hover:grayscale-0 transition-all duration-300">
               <img 
-                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Megvii%20company%20logo&sign=58b4374fd1831bdb4caa9ed528d11d22" 
+                src="/images/partners/megvii-logo.png" 
                 alt="旷视科技" 
                 className="h-16 object-contain"
               />
             </div>
             <div className="grayscale hover:grayscale-0 transition-all duration-300">
               <img 
-                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Wodisk%20company%20logo&sign=2a6c621d79da4d0c47088709e5c4dfad" 
-                alt="沃趣科技" 
-                className="h-16 object-contain"
-              />
-            </div>
-            <div className="grayscale hover:grayscale-0 transition-all duration-300">
-              <img 
-                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=Dahua%20Technology%20company%20logo&sign=07733830e89bc468cf8a16519a39d020" 
+                src="/images/partners/dahua-logo.png" 
                 alt="浙江大华" 
                 className="h-16 object-contain"
               />
