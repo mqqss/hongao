@@ -32,11 +32,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <i className="fa-solid fa-phone mr-2"></i>
-                <span>18009111064</span>
+                <span>18192105077</span>
               </li>
               <li className="flex items-center">
                 <i className="fa-solid fa-envelope mr-2"></i>
-                <span>18009111064@qq.com</span>
+                <span>46256164@qq.com</span>
               </li>
             </ul>
           </div>

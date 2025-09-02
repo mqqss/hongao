@@ -348,7 +348,7 @@ const About = () => {
                     <h4 className="text-lg font-medium mb-4 text-gray-700">战略生态合作伙伴</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
-                        <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
+                        <div className="w-20 h-20 flex items-center justify-center mr-6">
                           <img
                             src="/images/partners/china-mobile-logo.png"
                             alt="中国移动"
@@ -369,22 +369,22 @@ const About = () => {
                     <h4 className="text-lg font-medium mb-4 text-gray-700">技术赋能合作伙伴</h4>
                     <div className="grid grid-cols-3 md:grid-cols-2 gap-6">
                       <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
-                        <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
+                        <div className="w-20 h-20 flex items-center justify-center mr-6">
                           <img
-                            src="/images/partners/megvii-logo.png"
-                            alt="旷视科技"
+                            src="/images/partners/hainengda-logo.png"
+                            alt="海能达"
                             className="w-16 h-16 object-contain"
                           />
                         </div>
                         <div>
-                          <h5 className="text-lg font-medium mb-1">旷视科技</h5>
+                          <h5 className="text-lg font-medium mb-1">海能达</h5>
                           <p className="text-gray-700 text-sm">
-                            融合旷视科技领先的视觉AI技术，共同开发高精度场景化解决方案，通过视觉技术与业务场景的深度融合。
+                            借助海能达通信公司的先进技术支持，提供高效、可靠的通信解决方案及多样化需求。
                           </p>
                         </div>
                       </div>
                     <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
-                          <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
+                          <div className="w-20 h-20 flex items-center justify-center mr-6">
                             <img
                               src="/images/partners/hikvision-logo.png"
                               alt="海康威视"
@@ -400,7 +400,7 @@ const About = () => {
                         </div>
 
                         <div className="bg-gray-50 rounded-lg shadow-md p-6 flex items-center hover:shadow-lg transition-shadow duration-300">
-                          <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mr-6">
+                          <div className="w-20 h-20 flex items-center justify-center mr-6">
                             <img
                               src="/images/partners/dahua-logo.png"
                               alt="浙江大华"

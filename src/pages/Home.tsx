@@ -219,7 +219,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">生态合作</h3>
                 <p className="text-gray-600">
-                  与中国移动、海康威视、旷视科技等行业领军企业深度合作，通过资源整合与优势互补，打造跨领域技术联盟。
+                  与中国移动、海康威视、海能达等行业领军企业深度合作，通过资源整合与优势互补，打造跨领域技术联盟。
                 </p>
               </div>
             </div>
@@ -333,7 +333,7 @@ const Home = () => {
             <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-80">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16 opacity-80">
             <div className="grayscale hover:grayscale-0 transition-all duration-300">
               <img 
                 src="/images/partners/china-mobile-logo.png" 
@@ -350,8 +350,8 @@ const Home = () => {
             </div>
             <div className="grayscale hover:grayscale-0 transition-all duration-300">
               <img 
-                src="/images/partners/megvii-logo.png" 
-                alt="旷视科技" 
+                src="/images/partners/hainengda-logo.png" 
+                alt="海能达" 
                 className="h-16 object-contain"
               />
             </div>
