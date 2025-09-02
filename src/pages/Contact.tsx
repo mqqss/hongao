@@ -81,7 +81,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">联系电话</h3>
-                    <p className="text-gray-700">18009111064</p>
+                    <p className="text-gray-700">18192105077</p>
                     <p className="text-gray-500 text-sm">工作时间: 周一至周五 9:00-18:00</p>
                   </div>
                 </div>
